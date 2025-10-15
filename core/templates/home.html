@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+{% load static%}
+<section class="hero text-center text-white bg-primary py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to NakipSolar</h1>
+        <p class="lead">Your trusted partner in solar energy solutions.</p>
+        <a href="{% url 'product_list' %}" class="btn btn-light btn-lg">Explore Our Products</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p>At NakipSolar, we are committed to providing cutting-edge solar energy solutions that help you save energy and reduce your carbon footprint. Our team of experts ensures that every solar panel installation is seamless and efficient, so you can enjoy clean energy without hassle.</p>
+        <div class="text-center">
+            <a href="{% url 'about' %}" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/hero-image.jpg' %}" class="card-img-top" alt="Solar Panel Installation">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar Panel Installation</h5>
+                        <p class="card-text">We provide expert installation services to ensure your solar panels are set up for maximum efficiency and longevity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/hero-image.jpg' %}" class="card-img-top" alt="Maintenance & Repairs">
+                    <div class="card-body">
+                        <h5 class="card-title">Maintenance & Repairs</h5>
+                        <p class="card-text">Our team offers reliable maintenance and repair services to keep your solar energy system running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/hero-image.jpg' %}" class="card-img-top" alt="Consultation Services">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultation Services</h5>
+                        <p class="card-text">Not sure where to start? Our experts are here to help you assess your energy needs and find the right solar solutions for your home or business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section (Optional) -->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"NakipSolar transformed our energy bills! The installation was quick, and their team was incredibly professional. Highly recommend!"</p>
+                        <h5 class="card-title">John D.</h5>
+                        <p class="text-muted">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"We’ve been using solar energy for months now, and the savings are amazing! NakipSolar made the process seamless."</p>
+                        <h5 class="card-title">Samantha L.</h5>
+                        <p class="text-muted">Homeowner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"From consultation to installation, NakipSolar was with us every step of the way. We couldn't be happier with our new solar panels!"</p>
+                        <h5 class="card-title">Mark R.</h5>
+                        <p class="text-muted">Homeowner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <p class="text-center">Have questions or ready to make the switch to solar? Contact us, and we’ll help you every step of the way!</p>
+        <div class="text-center">
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

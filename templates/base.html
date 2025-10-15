@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NakipSolar - Solar Energy Solutions</title>
+
+    <!-- Load static tag -->
+    {% load static %}
+
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% include 'navbar.html'%}
+    {% block extra_css %}
+    <!-- Additional CSS (if any) -->
+    {% endblock %}
+</head>
+<body>
+
+    <main class="container mt-4">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="text-center py-3 mt-4">
+        <p>&copy; 2025 NakipSolar. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    {% block extra_js %}
+    <!-- Additional JS (if any) -->
+    {% endblock %}
+</body>
+</html>
