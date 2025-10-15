@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
-{% block content%}
-<h1>list</h1>
-{% endblock%}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="img-fluid rounded" alt="{{ product.name }}">
+                {% else %}
+                <div class="bg-light border rounded d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <span class="text-muted">Product imagery coming soon</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5">{{ product.name }}</h1>
+                <p class="lead">${{ product.price }}</p>
+                <p>{{ product.description }}</p>
+                <a href="{% url 'product_list' %}" class="btn btn-outline-secondary mt-3">Back to all products</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

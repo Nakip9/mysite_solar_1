@@ -1,4 +1,29 @@
 {% extends 'base.html' %}
-{% block content%}
-<h1>projects</h1>
-{% endblock%}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="display-4 mb-4">Recent Projects</h1>
+        <p class="lead">Explore a snapshot of installations we've completed for clients who wanted to unlock the power of the sun.</p>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|default:'A custom solar installation tailored for optimal performance.' }}</p>
+                        {% if project.link %}
+                        <a href="{{ project.link }}" class="btn btn-outline-primary" target="_blank" rel="noopener">View Project</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-muted">We are lining up case studies to showcase soon. Check back to see how we are helping customers cut energy costs.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

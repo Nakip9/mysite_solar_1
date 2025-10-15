@@ -1,0 +1,31 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  padding: 3rem 1.5rem;
+}
+
+.app-footer {
+  background: #0b3d2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.app-footer nav {
+  margin-bottom: 1rem;
+}
+
+.app-footer a {
+  color: #ffffff;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}

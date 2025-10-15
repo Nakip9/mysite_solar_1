@@ -1,15 +1,19 @@
 from django.shortcuts import render
 from .models import Project
 
+
 def home(request):
     return render(request, 'home.html')
+
 
 def about(request):
     return render(request, 'about.html')
 
+
 def contact(request):
     return render(request, 'contact.html')
 
+
 def projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('title')
     return render(request, 'projects.html', {'projects': projects})
