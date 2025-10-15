@@ -1,16 +1,18 @@
 <footer class="footer">
-  <div class="footer__logo">NakipSolar</div>
-  <div class="footer__nav">
-    <a href="{% url 'home' %}" class="footer__link">Home</a>
-    <a href="{% url 'about' %}" class="footer__link">About Us</a>
-    <a href="{% url 'product_list' %}" class="footer__link">Products</a>
-    <a href="{% url 'projects' %}" class="footer__link">Projects</a>
-    <a href="{% url 'contact' %}" class="footer__link">Contact Us</a>
+  <div class="container">
+    <div class="footer__logo mb-3">NakipSolar</div>
+    <div class="footer__nav mb-3">
+      <a href="{% url 'home' %}" class="footer__link">Home</a>
+      <a href="{% url 'about' %}" class="footer__link">About Us</a>
+      <a href="{% url 'product_list' %}" class="footer__link">Products</a>
+      <a href="{% url 'projects' %}" class="footer__link">Projects</a>
+      <a href="{% url 'contact' %}" class="footer__link">Contact Us</a>
+    </div>
+    <div class="footer__socials mb-3">
+      <a href="#" class="footer__socials__link"><i class="ri-facebook-line"></i></a>
+      <a href="#" class="footer__socials__link"><i class="ri-twitter-line"></i></a>
+      <a href="#" class="footer__socials__link"><i class="ri-instagram-line"></i></a>
+    </div>
+    <p class="mb-0">&copy; {% now 'Y' %} NakipSolar. All rights reserved.</p>
   </div>
-  <div class="footer__socials">
-    <a href="#" class="footer__socials__link"><i class="ri-facebook-line"></i></a>
-    <a href="#" class="footer__socials__link"><i class="ri-twitter-line"></i></a>
-    <a href="#" class="footer__socials__link"><i class="ri-instagram-line"></i></a>
-  </div>
-  <p>&copy; 2025 NakipSolar. All rights reserved.</p>
 </footer>

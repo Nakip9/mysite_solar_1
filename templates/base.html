@@ -4,33 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NakipSolar - Solar Energy Solutions</title>
-
-    <!-- Load static tag -->
     {% load static %}
 
-    <!-- Bootstrap CSS from CDN -->
+    <!-- Third-party styles -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    {% include 'navbar.html'%}
-    {% block extra_css %}
-    <!-- Additional CSS (if any) -->
-    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-TKO4T+N9fT7yHP1jHS+9+q5PUZ6Wbw2j3DjjlHz4+FF2Cc2aX7mqdlnpGSqwxql1PxEzrvkG/fg4f3FMhMNppw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
+    {% include 'navbar.html' %}
 
-    <main class="container mt-4">
-        {% block content %}
-        {% endblock %}
+    <main class="container mt-5 pt-5">
+        {% block content %}{% endblock %}
     </main>
 
-    <footer class="text-center py-3 mt-4">
-        <p>&copy; 2025 NakipSolar. All rights reserved.</p>
-    </footer>
+    {% include 'footer.html' %}
 
-    <!-- Bootstrap JS from CDN -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-    {% block extra_js %}
-    <!-- Additional JS (if any) -->
-    {% endblock %}
+    {% block extra_js %}{% endblock %}
 </body>
 </html>
